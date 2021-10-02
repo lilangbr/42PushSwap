@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ebresser <ebresser@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 21:59:30 by ebresser          #+#    #+#             */
-/*   Updated: 2021/09/29 19:19:15 by user42           ###   ########.fr       */
+/*   Updated: 2021/10/02 15:34:19 by ebresser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ typedef struct s_game
 void	validate_args(int argc, char **argv);
 
 void	init_stacks(t_game *towers);
-void	fill_a_stack(int argc, char **argv, t_stack *a);
+void	fill_a_stack(int argc, char **argv, t_game *towers);
 int		normalize(t_stack *a, int argc);
 
 int		is_ordered(t_stack *a);
@@ -84,5 +84,6 @@ void	order_three_plus(t_game *towers, int plus);
 void	order_more_than_five(t_game *towers, int t_size_a);
 
 void	error(void);
+void	malloc_error(t_game *towers);
 
 #endif

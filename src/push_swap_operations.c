@@ -6,7 +6,7 @@
 /*   By: ebresser <ebresser@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 19:29:40 by ebresser          #+#    #+#             */
-/*   Updated: 2021/09/28 23:06:15 by ebresser         ###   ########.fr       */
+/*   Updated: 2021/10/02 15:34:15 by ebresser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ void	push(t_game *towers, char which_stack)
 		if (towers->b.top != NULL)
 		{
 			new = new_node(towers->b.top->content, towers->b.top->normalized);
+			if (new == NULL)
+				malloc_error(towers);
 			pop_one(&towers->b);
 			push_one(&towers->a, new);
 			ft_putendl_fd("pa", STDOUT_FILENO);
@@ -55,6 +57,8 @@ void	push(t_game *towers, char which_stack)
 		if (towers->a.top != NULL)
 		{
 			new = new_node(towers->a.top->content, towers->a.top->normalized);
+			if (new == NULL)
+				malloc_error(towers);
 			pop_one(&towers->a);
 			push_one(&towers->b, new);
 			ft_putendl_fd("pb", STDOUT_FILENO);

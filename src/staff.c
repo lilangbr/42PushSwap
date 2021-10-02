@@ -6,7 +6,7 @@
 /*   By: ebresser <ebresser@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 14:45:48 by ebresser          #+#    #+#             */
-/*   Updated: 2021/09/28 23:08:23 by ebresser         ###   ########.fr       */
+/*   Updated: 2021/10/02 15:28:23 by ebresser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ t_node	*new_node(int content, int norm)
 		node->normalized = norm;
 		node->next = NULL;
 	}
-	else
-		ft_putendl_fd("EH P TRATAR?", 1);
 	return (node);
 }
 
@@ -41,6 +39,13 @@ void	free_stack(t_stack *s)
 		free(node);
 		node = aux;
 	}
+}
+
+void	malloc_error(t_game *towers)
+{
+	free_stack(&towers->a);
+	free_stack(&towers->b);
+	error();
 }
 
 void	error(void)

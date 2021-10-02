@@ -6,7 +6,7 @@
 /*   By: ebresser <ebresser@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 22:42:15 by ebresser          #+#    #+#             */
-/*   Updated: 2021/09/28 22:42:29 by ebresser         ###   ########.fr       */
+/*   Updated: 2021/10/02 15:34:08 by ebresser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	init_stacks(t_game *towers)
 	towers->b.top = NULL;
 }
 
-void	fill_a_stack(int argc, char **argv, t_stack *a)
+void	fill_a_stack(int argc, char **argv, t_game *towers)
 {
 	t_node	*new;
 	int		i;
@@ -27,7 +27,9 @@ void	fill_a_stack(int argc, char **argv, t_stack *a)
 	while (i >= 0)
 	{
 		new = new_node(ft_atoi(argv[i]), -1);
-		push_one(a, new);
+		if (new == NULL)
+			malloc_error(towers);
+		push_one(&towers->a, new);
 		i--;
 	}
 }

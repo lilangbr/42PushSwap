@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ebresser <ebresser@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 21:55:40 by ebresser          #+#    #+#             */
-/*   Updated: 2021/09/29 19:31:19 by user42           ###   ########.fr       */
+/*   Updated: 2021/10/02 15:34:12 by ebresser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 	argv++;
 	validate_args(argc, argv);
 	init_stacks(&towers);
-	fill_a_stack(argc, argv, &towers.a);
+	fill_a_stack(argc, argv, &towers);
 	if (is_ordered(&towers.a))
 	{
 		free_stack(&towers.a);
