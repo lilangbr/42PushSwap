@@ -13,13 +13,13 @@ instructions to manipulate both stacks.</br></br>
 Your goal ? Write a program in C called push_swap which calculates and displays
 on the standard output the smallest program using Push_swap instruction language that
 sorts the integer arguments received.</br></br>
-I choose [Radix Sort](https://www.youtube.com/watch?v=nu4gDuFabIM) due its brilhant resolution and due to its complexity (O (n log(n)), same as QuickSort.)</br></br>
+I choose [Radix Sort](https://www.youtube.com/watch?v=nu4gDuFabIM) due its brilhant resolution and due to its complexity (O (n log(n)), same as QuickSort, in the middle case. [see](https://pt.stackoverflow.com/questions/56836/defini%C3%A7%C3%A3o-da-nota%C3%A7%C3%A3o-big-o#:~:text=A%20ideia%20da%20nota%C3%A7%C3%A3o%20Big,%2C%20genericamente%2C%20por%20n%20))</br></br>
 
 ## Testing: </br>
 (by [Lais Arena](https://github.com/laisarena)) </br></br>
 ![peek](tester_push.gif)</br></br>
 ## Visualizing: </br>
-(by [O-reo](https://github.com/o-reo/push_swap_visualizer)) </br></br>
+(by [O-reo](https://github.com/o-reo/push_swap_visualizer), in the range [-50, 50]) </br></br>
 ![peek](visualizer_push2.gif)
 ## Ckeck 42norm: </br>
 (by [42School_norm](https://github.com/42School/norminette/blob/master/pdf/pt_br.norm.pdf)) </br></br>
