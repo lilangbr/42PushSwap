@@ -1,6 +1,6 @@
-# 42PushSwap 
+# 42PushSwap  
 
-## About </br></br>
+## About
 This project will make you sort data on a stack, with a limited set of instructions, using
 the lowest possible number of actions. To succeed you’ll have to manipulate various
 types of algorithms and choose the one (of many) most appropriate solution for an
@@ -21,6 +21,11 @@ $ ./push_swap {{int_numbers}}
 $ (You can use an script to shuffle: ARG=$(ruby -e "puts (-50..49).to_a.shuffle.join(' ')") (To shuffle 100 numbers, for example)
 $ ./push_swap $ARG
 ```
+</br>
+
+*Note: If you want to view the stacks, use the print_to_terminal.c function in the debbug folder. Just include the file name in the Makefile, the function definition in the .h file and use it inside the order_\* functions, at the end, before releasing the stacks, if any. (free_stack command)*. </br></br>
+*Important: For testing, don't print the stack, just the commands. That is, don't use the print_to_terminal.c function (That's exactly why it wasn't included, but left as gift)*.
+</br></br>
 
 ## Testing: </br>
 
